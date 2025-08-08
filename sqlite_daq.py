@@ -30,6 +30,8 @@ class SQLiteDaqWrapper:
     def __init__(self, db_name: str) -> None:
         # A connection must be used only from its creating thread by default.
         # We keep that invariant by creating a separate wrapper in worker threads.
+        if not db_name.lower().endswith('.db'):
+            db_name += '.db'
         self.db_name = db_name
         self.conn = sqlite3.connect(self.db_name)
         self.cursor = self.conn.cursor()

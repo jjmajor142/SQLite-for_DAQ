@@ -1,0 +1,15 @@
+[project]
+name = "sqlite-daq"
+version = "0.1.0"
+description = "A SQLite wrapper optimized for DAQ-style, append-only logging."
+authors = [
+    { name = "jjmajor142", email = "jjmajor142@gmail.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = ["sqlite3"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
